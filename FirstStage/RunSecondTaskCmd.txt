@@ -1,0 +1,5 @@
+"C:\Program Files\Java\jdk1.8.0_192\bin\javac.exe" SecondTask.java
+java -cp . main.java.JavaFundamentals.MainTask/SecondTask
+
+"C:\Program Files\Java\jdk1.8.0_192\bin\javac.exe" FourthTask.java
+java -cp . main.java.JavaFundamentals.MainTask/FourthTask
