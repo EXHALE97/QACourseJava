@@ -7,18 +7,17 @@ public class Grades {
     private int languageSubjectMark;
     private double totalGrade;
 
-    public Grades(double diplomaGPA, int firstSubjectMark, int secondSubjectMark, int languageSubjectMark){
-        this.diplomaGPA = diplomaGPA;
-        this.firstSubjectMark = firstSubjectMark;
-        this.secondSubjectMark = secondSubjectMark;
-        this.languageSubjectMark = languageSubjectMark;
-        this.totalGrade = (diplomaGPA*10) + firstSubjectMark + secondSubjectMark + languageSubjectMark;
-    }
 
     public Grades(double diplomaGPA, int firstSubjectMark, int languageSubjectMark) {
         this.diplomaGPA = diplomaGPA;
         this.firstSubjectMark = firstSubjectMark;
         this.languageSubjectMark = languageSubjectMark;
+    }
+
+    public Grades(double diplomaGPA, int firstSubjectMark, int secondSubjectMark, int languageSubjectMark){
+        this(diplomaGPA,firstSubjectMark,languageSubjectMark);
+        this.secondSubjectMark = secondSubjectMark;
+        this.totalGrade = (diplomaGPA*10) + firstSubjectMark + secondSubjectMark + languageSubjectMark;
     }
 
     public void setDiplomaGPA(double diplomaGPA) {

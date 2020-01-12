@@ -6,17 +6,15 @@ public class Address {
     private String cityAddress;
     private String phoneNumber;
 
-    public Address(String city, int postIndex, String cityAddress, String phoneNumber){
-        this.city = city;
-        this.cityAddress = cityAddress;
-        this.postIndex = postIndex;
-        this.phoneNumber = phoneNumber;
-    }
-
     public Address(String city, String cityAddress, String phoneNumber) {
         this.city = city;
         this.cityAddress = cityAddress;
         this.phoneNumber = phoneNumber;
+    }
+
+    public Address(String city, int postIndex, String cityAddress, String phoneNumber){
+        this(city,cityAddress,phoneNumber);
+        this.postIndex = postIndex;
     }
 
     public void setCity(String city) {

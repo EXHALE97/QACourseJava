@@ -13,25 +13,22 @@ public class Abiturient {
     public Abiturient(int id,
                       String lastName,
                       String firstName,
-                      String middleName,
-                      Address address,
-                      Grades grades){
-        this.id = id;
-        this.lastName = lastName;
-        this.firstName = firstName;
-        this.middleName = middleName;
-        this.address = address;
-        this.grades = grades;
-    }
-
-    public Abiturient(int id,
-                      String lastName,
-                      String firstName,
                       String middleName){
         this.id = id;
         this.lastName = lastName;
         this.firstName = firstName;
         this.middleName = middleName;
+    }
+
+    public Abiturient(int id,
+                      String lastName,
+                      String firstName,
+                      String middleName,
+                      Address address,
+                      Grades grades){
+        this(id, lastName, firstName, middleName);
+        this.address = address;
+        this.grades = grades;
     }
 
     public Address getAddress() {
