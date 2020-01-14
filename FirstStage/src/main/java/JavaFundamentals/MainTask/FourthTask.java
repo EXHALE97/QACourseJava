@@ -1,4 +1,4 @@
-package main.java.JavaFundamentals.MainTask;
+package javafundamentals.maintask;
 
 public class FourthTask {
     public static void main( String[] args )
