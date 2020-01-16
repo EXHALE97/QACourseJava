@@ -52,13 +52,12 @@ public class FourthOptionalTask {
             int delJ = maxJ;
             Matrix matrixTemp = new Matrix(n-1);
             for (int i = 0, iTemp = 0; iTemp < n - 1; i++) {
-                if (i != delI) { //если строка не совпадает с той, которую нужно удалить
-                    for (int j = 0, jTemp = 0; jTemp < n - 1; j++, jTemp++) { //то проходим по столбцам чтобы данную строку записать во временную матрицу
-                        if (j == delJ) {//если столбец совпадает с тем, который нужно удалить
-                            j++; //переходим к следующему столбцу
+                if (i != delI) {
+                    for (int j = 0, jTemp = 0; jTemp < n - 1; j++, jTemp++) {
+                        if (j == delJ) {
+                            j++;
                         }
-                        matrixTemp.matr[iTemp][jTemp] = matrix.matr[i][j]; //а следом уже записываем следующий столбец в матрицу.
-                        // если if оказался false, то записывает конкретный столбец
+                        matrixTemp.matr[iTemp][jTemp] = matrix.matr[i][j];
                     }
                     iTemp++;
                 }
